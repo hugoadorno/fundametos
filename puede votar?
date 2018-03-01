@@ -1,0 +1,9 @@
+Proceso inicio
+	Escribir "ingresar edad"
+	Leer edad
+	Si edad>=18 Entonces
+		Escribir "puede votar"
+	Sino
+		Escribir "ne puede votar"
+	FinSi
+FinProceso
