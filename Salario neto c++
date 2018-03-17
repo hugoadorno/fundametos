@@ -1,0 +1,15 @@
+// salario neto
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+ 
+using namespace std;
+void main(){
+	float salariobruto,salarioneto;
+	cout<<"ingrese su salario: "<<endl;
+	cin>>salariobruto;
+	salarioneto=salariobruto-(salariobruto*0.13)+(salariobruto*0.121);
+	cout<<"su salario neto querido amigo es: "<<salarioneto<<endl;
+	getch();
+}
