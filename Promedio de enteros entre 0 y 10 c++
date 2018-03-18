@@ -26,7 +26,7 @@ void main(){
 			}
 
 			else
-				cout<<"Error en c.";
+				cout<<"Error en a.";
 
 		else
 			cout<<"Error en b.";
