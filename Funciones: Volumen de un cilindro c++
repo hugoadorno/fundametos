@@ -1,0 +1,27 @@
+// funciones volumen.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+float calculo_vol (float r, float h);   //prototipo de la funcion
+
+void main(){
+	float radio, altura, volumen;
+	cout<<"Ingrese el radio: ";
+	cin>>radio;
+	cout<<"Ingrese la altura: ";
+	cin>>altura;
+	volumen = calculo_vol (radio, altura);  //llamada
+	cout<<"El volumen es: "<<volumen;
+	getch();
+}
+float calculo_vol (float r, float h)  //definicion de la funcion
+{
+	float v;
+	v=3.14*r*r*h;
+	return v;
+}
