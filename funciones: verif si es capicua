@@ -1,0 +1,42 @@
+// funcion.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include "math.h"
+using namespace std;
+
+int invertir(int n);
+bool verif_capicua(int n);
+
+
+void main(){
+	int n,cap;
+	cout<<"ingrese N: ";
+	cin>>n;
+	cap=verif_capicua(n);
+	if(cap==1){
+		cout<<"es capicua ";
+	}else{
+		cout<<"No es capicua";
+	}
+	getch();
+}   
+
+int invertir(int n){
+	int s=0;
+	while(n>0){
+		s=s*10+n%10;
+		n=n/10;
+	}
+	return(s);
+}
+
+bool verif_capicua(int n){
+	(n==invertir(n)){
+	return true;
+	}else{
+		return false;
+	}
+}
