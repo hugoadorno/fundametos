@@ -1,0 +1,28 @@
+ funcion.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include "math.h"
+using namespace std;
+
+int invertir(int n);
+
+
+void main(){
+	int n,inv;
+	cout<<"ingrese su numero a invertir: ";
+	cin>>n;
+	inv=invertir(n);
+	cout<<" su numero invertido es:"<<inv;
+	getch();
+} 
+int invertir(int n){
+	int s=0;
+	while(n>0){
+		s=s*10+n%10;
+		n=n/10;
+	}
+	return(s);
+}
