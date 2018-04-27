@@ -1,0 +1,28 @@
+// funcion.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+
+using namespace std;
+
+int cantidad_dig(int n);
+
+void main(){
+int n,cd;
+cout<<"ingrese un numero: ";
+cin>>n;
+cd=cantidad_dig(n);
+cout<<" la cantidad de digitos es: "<<cd;
+getch();
+}
+
+int cantidad_dig(int n){
+	int c=0;
+	while(n>0){
+	 c=c+1;
+	 n=n/10;
+	}
+	return(c);
+}
