@@ -1,0 +1,30 @@
+// 1.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include "Math.h"
+
+using namespace std;
+
+void distancia(float &D, float &xa, float &xb, float &ya, float &yb);
+
+void main(){
+	float D, xa, xb, ya, yb;
+	int b, n;
+	distancia(D,xa,xb,ya,yb);
+	getch();
+}
+void distancia(float &D, float &xa, float &xb, float &ya, float &yb){
+	cout<<"Para saber la distancia la coordenada en X del 1er punto: ";
+	cin>>xa;
+	cout<<"Para saber la distancia la coordenada en Y del 1er punto: ";
+	cin>>ya;
+	cout<<"Para saber la distancia la coordenada en X del 2do punto: ";
+	cin>>xb;
+	cout<<"Para saber la distancia la coordenada en Y del 2do punto: ";
+	cin>>yb;
+	D=(sqrt((pow((xa-xb),2)+(pow((ya-yb),2)))),2);
+	cout<<"la distancia entre los puntos p("<<xa<<","<<ya<<") y q("<<xb<<","<<yb<<") es de:"<<endl<<D;
+}
