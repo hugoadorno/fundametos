@@ -1,0 +1,48 @@
+// 1.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#define MAX 20
+
+using namespace std;
+
+void cargar(int Mat[MAX][MAX],int N,int M);
+void traspaso(int MAT[MAX][MAX], int v[], int N, int M);
+void mostrarvector(int v[],int N, int M);
+
+void main(){
+	int Mat[MAX][MAX], v[MAX], N,M;
+	cout<<"ingrese el nro de filas: ";
+	cin>>N;
+	cout<<"ingrese el nro de columnas: ";
+	cin>>M;
+	cargar(Mat,N,M);
+	traspaso(Mat,v,N,M);
+	mostrarvector(v,N,M);
+	getch();
+}
+void cargar(int Mat[MAX][MAX],int N,int M){
+	for(int i=0;i<N;i++){
+		for(int j=0;j<M;j++){
+			cout<<"Matriz ["<<i<<"j["<<j<<"]=";
+			cin>>Mat[i][j];
+		}
+	}
+}
+
+void traspaso(int MAT[MAX][MAX], int v[], int N, int M){
+	int k=0;
+	for(int i=0;i<N;i++){
+		for(int j=0;j<M;j++){
+			v[k]=M[i][j];
+			k++;
+		}
+	}
+}
+void mostrarvector(int v[],int N, int M){
+	for(int i=0;i<(M*N);i++){
+		cout<<"vector["<<i<<"]="<<v[i]<<endl;
+	}
+}
