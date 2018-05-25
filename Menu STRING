@@ -1,0 +1,34 @@
+int longitud( string nombre);
+
+
+void main(){
+
+	int longitud,cont,pos,opc;
+	char aux;
+	string var1, var2, nombre;//declarada de string
+	do{
+		cout<<"\t Menu \n ";
+		cout<<"\t === \n \n";
+		cout<<" 1. Longitud \n";
+		cout<<" 0. Salir \n";
+		cout<<" opcion: ";
+		cin>>opc;
+		switch (opc){
+		case 1: cout<< "ingrese la cadena:";
+				getline(cin, var1);
+				cout<< "la cadena "<<var1<<"es:"<<longitud;
+				break;
+		case 0: cout<<"sali";
+				break;
+		default:cout<<"error";
+			break;
+		}
+		cout<<endl;
+	}while (opc!=0);
+	getch();
+}
+int longitud( string nombre){
+	int aux1;
+	aux1=nombre.length();
+	return aux1;
+}
