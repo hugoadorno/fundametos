@@ -1,0 +1,25 @@
+ 1.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#define MAX 20
+
+using namespace std;
+
+float POTEN(float x, float y);
+
+int main(){
+	float a,b;
+	cout<<"ingrese a:";
+	cin>>a;
+	cout<<"ingrese b:";
+	cin>>b;
+	cout<<"la potencia es:"<<POTEN(float a, float b);
+	getch();
+}
+float POTEN(float x, float y){
+	float pot;
+	pot=pow(x,y);
+	return pot;
